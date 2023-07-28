@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const privateKey = process.env.SUPABASE_KEY;
     if (!privateKey) throw new Error(`Expected env var SUPABASE_PRIVATE_KEY`);
 
-    const url = process.env.SUPABASE_URL;
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
     if (!url) throw new Error(`Expected env var SUPABASE_URL`);
 
     const client = createClient(url, privateKey);
