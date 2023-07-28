@@ -1,0 +1,116 @@
+@import "@/resources/variables.scss";
+
+//textmessage
+
+.text {
+    font-size: 16px;
+    margin: 0 0 0 0;
+    white-space: pre-line;
+    min-width: 20px;
+  }
+
+
+
+// PODCAST MESSAGE
+.podcastmessage {
+    // background-color: $darkblue;
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+  
+  
+    .left {
+        // width: 40%;
+        padding: 10px;
+  
+        .podcastImg {
+            background-image: url('/img/faye.jpg');
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    .right {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        // font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .link {
+        // font-size: 16px;
+        text-transform: uppercase;
+        color: $greenblue;
+    }
+    
+  }
+
+
+// Message Prompts 
+.messagePromptContainer {
+    display: flex;
+
+    .messagePrompt {
+        cursor: pointer;
+        background: $pink;
+        color: $darkblue;
+        border-radius: 20px;
+        padding: 10px 15px;
+        margin-right: 10px;
+        // font-size: 0.9
+
+    }
+}
+
+  
+@media (max-width: 800px) {
+
+    .podcastmessage {
+
+        .container {
+            align-items: center;
+        }
+        .left {
+            padding: 5px;
+
+            .podcastImg {
+                max-width: 20vw;
+                max-height: 20vw;
+            }
+
+        }
+
+        .right {
+            padding: 5px;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .title, .subtitle {
+            margin-bottom: 2px;
+        }
+
+        .subtitle, .link {
+            font-size: 13px;
+        }
+    }
+
+}

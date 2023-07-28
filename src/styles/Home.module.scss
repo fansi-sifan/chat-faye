@@ -1,0 +1,154 @@
+@import "../resources/variables.scss";
+
+// HOME
+
+.homeParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // position: relative;
+}
+
+.home {
+    // padding: 0 50px;
+    max-width: 800px;
+    border-radius: 15px;
+    margin: 20px 0 90px 0;
+    background: #0a101f;
+    box-shadow: 0px 0px 15px 4px rgba(72, 72, 72, 0.3);
+
+    .homebody {
+        padding: 20px;
+    }
+}
+
+.recommendations, .disclaimer {
+    margin-top: 80px;
+}
+
+
+// INTRODUCTION
+
+.introduction {
+    // width: 100%;
+    background: linear-gradient($greenblue 0%, $darkdarkblue 70%);
+    padding: 20px;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+
+    .title {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+        font-style: italic;
+    }
+}
+
+
+// RECOMMENDATIONS
+
+
+
+.recommendations {
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-top: 1px solid $bordergrey;
+        border-bottom: 1px solid $bordergrey;
+    }
+
+
+    .left {
+        // width: 40%;
+        padding: 20px;
+
+        .podcastImg {
+            background-image: url('/img/path_of_insight_logo.jpg');
+            width: 92px;
+            height: 92px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    .right {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        // font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .link {
+        // font-size: 16px;
+        text-transform: uppercase;
+        color: $greenblue;
+    }
+    
+}
+
+
+// DISCLAIMER
+
+.footer {
+    background: $darkdarkblue;
+    width: calc(100vw - 40px);
+    position: fixed;
+    bottom: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+
+    .hireLink {
+        text-decoration: underline;
+    }
+}
+
+.footerContainer {
+    max-width: 500px;
+}
+
+
+// MOBILE
+
+@media (max-width: 800px) {
+
+    .home {
+        // padding: 0 50px;
+        width: 100vw;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0 0 45.5px 0;
+        background: #0a101f;
+    
+        .homebody {
+            padding: 5vw;
+        }
+    }
+
+    .introduction {
+        border-radius: 0;
+    }
+
+    .footer {
+        background: $lightblue;
+    }
+
+}
