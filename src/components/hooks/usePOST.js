@@ -9,7 +9,7 @@ function usePOST(url) {
     async (bodyContent) => {
       setLoading(true);
       setError(null);
-      console.log(bodyContent)
+      // console.log(bodyContent)
 
 
       try {

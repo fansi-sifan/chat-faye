@@ -8,7 +8,7 @@ function Introduction() {
           <p className={styles.subtitle}>Happy Birthday 芃芃!!!</p>
       </div>
       {/* <div className={styles.explanation}>
-        <p>Ask meditation related questions and get answered by an AI, based on Joseph Goldstein lectures on the Waking Up app.</p>
+        <p>Describe your current mood, feelings, and find the perfect lyrics.</p>
       </div> */}
     </div>
   );

@@ -34,7 +34,7 @@ export default async function handler(req, res) {
     // get song link
     const songName = resultOne[0].metadata.title
     const songLink = await getSpotifySongLink(songName);
-    console.log(songLink)
+    // console.log(songLink)
 
     const song = {
         name: songName,

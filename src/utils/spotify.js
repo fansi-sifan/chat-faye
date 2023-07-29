@@ -12,8 +12,7 @@ async function getSpotifySongLink(songName) {
   const data = await spotifyApi.clientCredentialsGrant();
   // const artistName = '3df3XLKuqTQ6iOSmi0K3Wp';
   const artistName = '王菲';
-
-  console.log(songName)
+  const search = songName + " " + artistName;
 
   // spotifyApi.setAccessToken(data.body['access_token']);
   // const searchResult = await spotifyApi.searchTracks(`track:${songName}}`);
@@ -24,7 +23,7 @@ async function getSpotifySongLink(songName) {
   const limit = 20;
 
 
-  const url = `https://api.spotify.com/v1/search?query=${encodeURIComponent(songName)}%20王菲&type=${type}&offset=${offset}&limit=${limit}`;
+  const url = `https://api.spotify.com/v1/search?query=${encodeURIComponent(search)}&type=${type}&offset=${offset}&limit=${limit}`;
   // const url = `https://api.spotify.com/v1/search?query=track:${encodeURIComponent(songName)}%20artist:${encodeURIComponent(artistName)}&type=${type}&offset=${offset}&limit=${limit}`;
   const response = await fetch(url, {
     headers: {

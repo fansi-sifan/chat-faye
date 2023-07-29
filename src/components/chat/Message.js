@@ -2,7 +2,6 @@ import styles from "./response.module.scss";
 import UserIcon from "./UserIcon";
 import TextMessage from "./messages/TextMessage";
 import PodcastMessage from "./messages/PodcastMessage";
-import {useSpring, animated} from 'react-spring';
 
 const Message = ({message, sender, timestamp, checkTypingFinished, type, link}) => {
     const date = new Date(timestamp);
