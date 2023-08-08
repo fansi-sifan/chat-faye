@@ -11,7 +11,7 @@ async function getSpotifySongLink(songName) {
 
   const data = await spotifyApi.clientCredentialsGrant();
   // const artistName = '3df3XLKuqTQ6iOSmi0K3Wp';
-  const artistName = '王菲';
+  const artistName = 'coldplay';
   const search = songName + " " + artistName;
 
   // spotifyApi.setAccessToken(data.body['access_token']);

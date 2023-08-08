@@ -12,6 +12,7 @@
     "@next/font": "13.1.6",
     "@reduxjs/toolkit": "^1.9.1",
     "@supabase/supabase-js": "^2.31.0",
+    "@vercel/analytics": "^1.0.1",
     "eslint-config-next": "13.1.6",
     "gpt-3-encoder": "^1.1.4",
     "langchain": "^0.0.118",

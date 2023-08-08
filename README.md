@@ -1,1 +1,1 @@
-Step into the captivating world of 王菲 Faye Wong's music 🎵🎶 This bot finds lyrics that perfectly match your current mood, feelings, or life status. 🌟 Experience it now: https://chat-faye.vercel.app/ 
+Step into the captivating world of coldplay's music 🎵🎶 This bot finds lyrics that perfectly match your current mood, feelings, or life status. 🌟 Experience it now: https://chat-coldplay.vercel.app/ 

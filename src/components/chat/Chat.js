@@ -38,7 +38,7 @@ function Chat() {
         dispatch(addChat({
           message: data.pageContent,
           type: "text",
-          sender: "王菲",
+          sender: "coldplay",
           vectors: data.vectors ? data.vectors : null,
           nvectors: data.nvectors ? data.nvectors : null,
           timestamp: Date.now(),
@@ -49,7 +49,7 @@ function Chat() {
           message: data.name,
           type: "podcast",
           link: data.link,
-          sender: "王菲",
+          sender: "coldplay",
           vectors: data.vectors ? data.vectors : null,
           nvectors: data.nvectors ? data.nvectors : null,
           timestamp: Date.now(),

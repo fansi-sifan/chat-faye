@@ -22,8 +22,8 @@ export default async function handler(req, res) {
       new OpenAIEmbeddings(),
       {
         client,
-        tableName: "faye",
-        queryName: "match_documents",
+        tableName: "coldplay",
+        queryName: "search_coldplay",
       }
     );
 

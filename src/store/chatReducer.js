@@ -5,9 +5,9 @@ export const chatSlice = createSlice({
   initialState: {
     messages: [
       {
-        message: "我是王菲，芃芃你想跟我说点什么？",
+        message: "Hi, tell me how you feel, I will find the pefect song for you.",
         link: null,
-        sender: "王菲",
+        sender: "coldplay",
         type: "text",
         vectors: null,
         nvectors: null,
