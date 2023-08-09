@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ChatFaye</title>
-        <meta name="description" content="Talk to Faye Wang AI" />
+        <title>ChatColdPlay</title>
+        <meta name="description" content="Find the perfect ColdPlay song" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
