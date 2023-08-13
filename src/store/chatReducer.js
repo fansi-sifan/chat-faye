@@ -7,7 +7,7 @@ export const chatSlice = createSlice({
       {
         message: "Hi, tell me how you feel, I will find the pefect song for you.",
         link: null,
-        sender: "coldplay",
+        sender: "artist",
         type: "text",
         vectors: null,
         nvectors: null,

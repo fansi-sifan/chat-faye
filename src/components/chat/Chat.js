@@ -4,7 +4,7 @@ import Response from "./Response";
 import usePOST from "../hooks/usePOST";
 import styles from "./chat.module.scss";
 import { useDispatch, useSelector } from 'react-redux';
-import { addChat, setSessionId } from '@/store/chatReducer';
+import { addChat} from '@/store/chatReducer';
 
 
 function Chat() {
@@ -12,7 +12,7 @@ function Chat() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
     const messages = useSelector((state) => state.chat.messages);
-    const sessionId = useSelector((state) => state.chat.sessionid);
+    // const sessionId = useSelector((state) => state.chat.sessionid);
     const dispatch = useDispatch();
 
     const sendMessage = async (message) => {
@@ -38,7 +38,7 @@ function Chat() {
         dispatch(addChat({
           message: data.pageContent,
           type: "text",
-          sender: "coldplay",
+          sender: "artist",
           vectors: data.vectors ? data.vectors : null,
           nvectors: data.nvectors ? data.nvectors : null,
           timestamp: Date.now(),
@@ -49,7 +49,7 @@ function Chat() {
           message: data.name,
           type: "podcast",
           link: data.link,
-          sender: "coldplay",
+          sender: "artist",
           vectors: data.vectors ? data.vectors : null,
           nvectors: data.nvectors ? data.nvectors : null,
           timestamp: Date.now(),

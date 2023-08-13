@@ -7,6 +7,7 @@ import { getSpotifySongLink } from "../../utils/spotify";
 // https://js.langchain.com/docs/modules/indexes/vector_stores/integrations/supabase
 
 export default async function handler(req, res) {
+    const artistName = "coldplay";
   
     try {
     const {query} = req.query;
@@ -22,7 +23,7 @@ export default async function handler(req, res) {
       new OpenAIEmbeddings(),
       {
         client,
-        tableName: "coldplay",
+        tableName: artistName,
         queryName: "search_coldplay",
       }
     );
@@ -33,7 +34,7 @@ export default async function handler(req, res) {
     // const songLink = "test"
     // get song link
     const songName = resultOne[0].metadata.title
-    const songLink = await getSpotifySongLink(songName);
+    const songLink = await getSpotifySongLink(songName, artistName);
     // console.log(songLink)
 
     const song = {
