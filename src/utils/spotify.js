@@ -22,8 +22,8 @@ async function getSpotifySongLink(songName, artistName) {
   const limit = 20;
 
 
-  const url = `https://api.spotify.com/v1/search?query=${encodeURIComponent(search)}&type=${type}&offset=${offset}&limit=${limit}`;
-  // const url = `https://api.spotify.com/v1/search?query=track:${encodeURIComponent(songName)}%20artist:${encodeURIComponent(artistName)}&type=${type}&offset=${offset}&limit=${limit}`;
+  // const url = `https://api.spotify.com/v1/search?query=${encodeURIComponent(search)}&type=${type}&offset=${offset}&limit=${limit}`;
+  const url = `https://api.spotify.com/v1/search?query=track:${encodeURIComponent(songName)}%20artist:${encodeURIComponent(artistName)}&type=${type}&offset=${offset}&limit=${limit}`;
   const response = await fetch(url, {
     headers: {
       'Authorization': `Bearer ${token}`
