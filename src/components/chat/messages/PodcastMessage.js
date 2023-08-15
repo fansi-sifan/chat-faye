@@ -13,7 +13,7 @@ function PodcastMessage({title, link}) {
     <div className={styles.spotifymessage}>
       <div className={styles.container}>
         <div className={styles.right}>
-          {/* <div className={styles.title}>{title}</div> */}
+          <div className={styles.title}>{title}</div>
           <div className={styles.player}>
             <SpotifyPlayer uri={link} />
           </div>
