@@ -32,10 +32,10 @@ async function getSpotifySongLink(songName, artistName) {
 
   const searchResult = await response.json();
 
-  console.log(searchResult.tracks.items[0].id)
+  // console.log(searchResult.tracks.items[0].id)
 
   if (searchResult.tracks.items.length > 0) {
-    const songLink = searchResult.tracks.items[0].id;
+    const songLink = searchResult?.tracks?.items?.[0]?.id ?? null;
     // const songLink = searchResult.tracks.items[0].external_urls;
 
     return songLink;
