@@ -33,7 +33,7 @@ async function getSpotifySongLink(songName) {
 
   const searchResult = await response.json();
 
-  console.log(searchResult)
+  // console.log(searchResult)
 
   if (searchResult.tracks.items.length > 0) {
     const songLink = searchResult.tracks.items[0].external_urls.spotify;
