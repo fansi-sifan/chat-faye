@@ -7,7 +7,7 @@ import { getSpotifySongLink } from "../../utils/spotify";
 // https://js.langchain.com/docs/modules/indexes/vector_stores/integrations/supabase
 
 export default async function handler(req, res) {
-    const artistName = "coldplay";
+    const artistName = "dpr_ian";
   
     try {
     const {query} = req.query;
