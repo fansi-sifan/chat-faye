@@ -4,11 +4,11 @@ import Response from "./Response";
 import usePOST from "../hooks/usePOST";
 import styles from "./chat.module.scss";
 import { useDispatch, useSelector } from 'react-redux';
-import { addChat} from '@/store/chatReducer';
+import { addChat} from '../../store/chatReducer'
 
 
 function Chat() {
-    const { sendRequest: getAnswer, loading: loadingAnswer, error: errorLoading } = usePOST("/api/get-song");
+    const { sendRequest: getAnswer, loading: loadingAnswer, error: errorLoading } = usePOST("/api/get-song-pinecone");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
     const messages = useSelector((state) => state.chat.messages);
@@ -30,7 +30,7 @@ function Chat() {
       
 
       const params = new URLSearchParams({ query: message });
-      const response = await fetch('/api/get-song?' + params.toString());
+      const response = await fetch('/api/get-song-pinecone?' + params.toString());
       const data = await response.json();
 
       if(data) {

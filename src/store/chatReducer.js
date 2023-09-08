@@ -5,7 +5,7 @@ export const chatSlice = createSlice({
   initialState: {
     messages: [
       {
-        message: "Find you the pefect song.",
+        message: "Hey Bevy, what can I sing for you?",
         link: null,
         sender: "artist",
         type: "text",

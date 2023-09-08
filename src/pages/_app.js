@@ -1,4 +1,4 @@
-import '@/styles/globals.scss'
+import '../styles/globals.scss'
 import { Provider } from 'react-redux'
 import { Analytics } from '@vercel/analytics/react';
 import store from "../store/store"
