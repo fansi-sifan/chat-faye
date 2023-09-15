@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextMessageForm from "./TextMessageForm";
 import Response from "./Response";
 import usePOST from "../hooks/usePOST";
 import styles from "./chat.module.scss";
 import { useDispatch, useSelector } from 'react-redux';
-import { addChat} from '../../store/chatReducer'
+import { resetChat, addChat} from '../../store/chatReducer'
 
 
-function Chat() {
+function Chat({selectedSinger}) {
     const { sendRequest: getAnswer, loading: loadingAnswer, error: errorLoading } = usePOST("/api/get-song-pinecone");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
     const messages = useSelector((state) => state.chat.messages);
     // const sessionId = useSelector((state) => state.chat.sessionid);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(resetChat(selectedSinger));
+    }, [selectedSinger, dispatch]);
 
     const sendMessage = async (message) => {
 
@@ -28,8 +32,8 @@ function Chat() {
         hint: false,
       }));
       
-
-      const params = new URLSearchParams({ query: message });
+      const params = new URLSearchParams({ query: message, artistName: selectedSinger });
+      console.log(params.toString())
       const response = await fetch('/api/get-song-pinecone?' + params.toString());
       const data = await response.json();
 

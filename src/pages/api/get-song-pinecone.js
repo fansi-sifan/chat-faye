@@ -5,14 +5,11 @@ import { PineconeStore } from "langchain/vectorstores/pinecone";
 
 
 
-// First, follow set-up instructions at
-// https://js.langchain.com/docs/modules/indexes/vector_stores/integrations/supabase
-
 export default async function handler(req, res) {
-    const artistName = "dpr ian";
-  
     try {
     const {query} = req.query;
+    const SingerName = req.query.artistName.replace(/\s/g, '');
+    console.log(req.query)
     const pinecone = new Pinecone({ 
     apiKey: process.env.PINECONE_API_KEY,
     environment: process.env.PINECONE_ENV
@@ -28,6 +25,8 @@ export default async function handler(req, res) {
       topK: 3,
       vector: embeded_query,
       includeMetadata: true,
+      // filter: { genre: { $in: ["comedy", "documentary", "drama"] } },
+      filter: { singer: { $eq: SingerName } }
   });
 
     console.log(resultOne['matches'][0].metadata)
@@ -35,7 +34,7 @@ export default async function handler(req, res) {
     // get song link
     // const songName = resultOne[0].metadata.title
     const songName = resultOne['matches'][0].metadata.title
-    const songLink = await getSpotifySongLink(songName, artistName);
+    const songLink = await getSpotifySongLink(songName, SingerName);
     // console.log(songLink)
 
     const song = {
