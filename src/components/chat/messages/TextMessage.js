@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 const TextMessage = ({message, sender, checkTypingFinished}) => {
 
     return (
-        <div className={styles.text}>{sender === "王菲" ? 
+        <div className={styles.text}>{sender === "coldplay" ? 
             <Typewriter 
                 onInit={(typewriter) => {
                     typewriter.callFunction(() => checkTypingFinished(false))

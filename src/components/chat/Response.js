@@ -57,7 +57,7 @@ const Response = ({loading, messages}) => {
       )}
 
       {loading && <TypingIndicator
-        sender="王菲"
+        sender="coldplay"
        />}
        <div ref={messagesEndRef} />
        
