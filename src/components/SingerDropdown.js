@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 const SingerDropdown = ({ selectedSinger, setSelectedSinger }) => {
   
-  const singers = ['coldplay', 'faye', 'dprian', 'Singer4'];
+  const singers = [
+    { label: 'Coldplay', value: 'coldplay' },
+    // { label: 'Faye Wong', value: 'faye' },
+    { label: 'DPR IAN', value: 'dpr ian' },
+  ];
 
   const handleSelect = (e) => {
     setSelectedSinger(e.target.value);
@@ -27,8 +31,8 @@ const SingerDropdown = ({ selectedSinger, setSelectedSinger }) => {
     <select style={dropdownStyle} value={selectedSinger} onChange={handleSelect}>
       <option value="">Select a singer</option>
       {singers.map((singer, index) => (
-        <option key={index} value={singer}>
-          {singer}
+        <option key={index} value={singer.value}>
+          {singer.label}
         </option>
       ))}
     </select>
