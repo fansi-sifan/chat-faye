@@ -1,7 +1,6 @@
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { getSpotifySongLink } from "../../utils/spotify";
 import { Pinecone } from '@pinecone-database/pinecone';
-import { PineconeStore } from "langchain/vectorstores/pinecone";
 
 
 
@@ -34,7 +33,7 @@ export default async function handler(req, res) {
     // get song link
     // const songName = resultOne[0].metadata.title
     const songName = resultOne['matches'][0].metadata.title
-    const songLink = await getSpotifySongLink(songName, SingerName);
+    const songLink = await getSpotifySongLink(songName, req.query.artistName);
     // console.log(songLink)
 
     const song = {
